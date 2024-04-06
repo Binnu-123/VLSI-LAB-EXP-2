@@ -76,10 +76,20 @@ endmodule
 ```
 # Multiplexer
 ```
-module mux(a,b,c,d,s0,s1,y);
-input a,b,c,d,s0,s1;
-output y;
-assign y=s1 ?(s0?d:c):(s0?b:a);
+module mux(s,c,a);
+input [2:0]s;
+input [7:0]a;
+wire [7:0]w;
+output c;
+and(w[0],a[0],~s[2],~s[1],~s[0]);
+and(w[1],a[1],~s[2],~s[1],s[0]);
+and(w[2],a[2],~s[2],s[1],~s[0]);
+and(w[3],a[3],~s[2],s[1],s[0]);
+and(w[4],a[4],s[2],~s[1],~s[0]);
+and(w[5],a[5],s[2],~s[1],s[0]);
+and(w[6],a[6],s[2],s[1],~s[0]);
+and(w[7],a[7],s[2],s[1],s[0]);
+or (c,w[0],w[1],w[2],w[3],w[4],w[5],w[6],w[7]);
 endmodule
 ```
 # Demultiplexer
@@ -131,7 +141,7 @@ OUTPUT WAVEFORM
 # Decoder
 ![image](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/92953775-2885-4606-9e2d-5ccb81339b7d)
 # Multiplexer
-![image](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/bda9fe19-7642-48aa-8fd2-03cdd7042a62)
+![image](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/56a2902b-1f5f-42b5-9499-ceb63982df40)
 # Demultiplexer
 ![image](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/a3cb6a60-e919-480f-9f62-da36571a4c97)
 # Maginitude Comparator
