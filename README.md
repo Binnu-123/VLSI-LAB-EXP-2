@@ -21,7 +21,7 @@ DECODER
 
 MULTIPLEXER
 
-![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/427f75b2-8e67-44b9-ac45-a66651787436)
+![WhatsApp Image 2024-04-06 at 11 10 33_05ec9f7b](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/303679aa-ba85-4884-8b48-e36d9d3e2de9)
 
 
 DEMULTIPLEXER
