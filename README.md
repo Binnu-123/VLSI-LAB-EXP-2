@@ -41,11 +41,17 @@ ENCODER
 VERILOG CODE
 
 module encoder(d,a,b,c) ;
+
 input [7:0]d;
+
 output a,b,c;
+
 or(a,d[4],d[5],d[6],d[7]);
+
 or(b,d[2],d[3],d[6],d[7]);
+
 or(c,d[1],d[3],d[5],d[7]);
+
 endmodule
 
 OUTPUT
@@ -59,16 +65,27 @@ DECODER
 VERILOG CODE
 
 module decoder_8(a,b,c,y);
+
 input a,b,c; 
+
 output[7:0]y; 
+
 and gl(y[0],(~a),(~b),(~c)); 
+
 and g2(y[1],(~a),(~b),(c)); 
+
 and g3(y[2],(~a),(b),(~c));
+
 and g4(y[3],(~a),(b),(c));
+
 and g5(y[4],(a),(~b),(~c));
+
 and g6(y[5],(a), (~b), (c));
+
 and g7(y[6], (a), (b), (~c)); 
+
 and g8(y[7], (a), (b), (c));
+
 endmodule
 
 OUTPUT
@@ -82,19 +99,33 @@ MULTIPLEXER
 VERILOG CODE
 
 module mux(s,c,a);
+
 input [2:0]s;
+
 input [7:0]a;
+
 wire [7:0]w;
+
 output c;
+
 and(w[0],a[0],~s[2],~s[1],~s[0]);
+
 and(w[1],a[1],~s[2],~s[1],s[0]);
+
 and(w[2],a[2],~s[2],s[1],~s[0]);
+
 and(w[3],a[3],~s[2],s[1],s[0]);
+
 and(w[4],a[4],s[2],~s[1],~s[0]);
+
 and(w[5],a[5],s[2],~s[1],s[0]);
+
 and(w[6],a[6],s[2],s[1],~s[0]);
+
 and(w[7],a[7],s[2],s[1],s[0]);
+
 or (c,w[0],w[1],w[2],w[3],w[4],w[5],w[6],w[7]);
+
 endmodule
 
 OUTPUT
@@ -109,16 +140,27 @@ DEMULTIPLEXER
 VERILOG CODE
 
 module demux(in,s0,s1,s2,d0,d1,d2,d3,d4,d5,d6,d7);
+
 input in,s0,s1,s2;
+
 output d0,d1,d2,d3,d4,d5,d6,d7;
+
 assign d0=(in & ~s2 & ~s1 &~s0),
+
 d1=(in & ~s2 & ~s1 &s0),
+
 d2=(in & ~s2 & s1 &~s0),
+
 d3=(in & ~s2 & s1 &s0),
+
 d4=(in & s2 & ~s1 &~s0),
+
 d5=(in & s2 & ~s1 &s0),
+
 d6=(in & s2 & s1 &~s0),
+
 d7=(in & s2 & s1 &s0);
+
 endmodule
 
 OUTPUT
@@ -132,30 +174,55 @@ MAGNITUDE COMPARATOR
 VERILOG CODE
 
 module magcomp(a,b,l,g,e);
+
 input [3:0]a,b;
+
 output reg l,g,e;
+
 always @(*)
+
 begin
+
 if(a>b)
+
 begin
+
      l=1'b0;
+     
      g=1'b1;
+     
      e=1'b0;
+     
 end
+
 else if(a<b)
+
 begin
+
      l=1'b1;
+     
      g=1'b0;
+     
      e=1'b0;
+     
 end
+
 else
+
 begin
+
      l=1'b0;
+     
      g=1'b0;
+     
      e=1'b1;
+     
 end
+
 end
+
 endmodule
+
 
 OUTPUT
 
