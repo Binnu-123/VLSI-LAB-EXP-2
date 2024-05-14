@@ -32,9 +32,7 @@ STEP:10 Double click on the Implement Design and double click on the Generate Pr
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
 
-**LOGIC DIAGRAM**
-
-ENCODER
+LOGIC DIAGRAM OF ENCODER
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/3cd1f95e-7531-4cad-9154-fdd397ac439e)
 
@@ -58,7 +56,7 @@ OUTPUT
 
 ![image](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/0d134495-66c2-41fd-a1da-086606a34d33)
 
-DECODER
+LOGIC DIAGRAM OF DECODER
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b)
 
@@ -92,9 +90,10 @@ OUTPUT
 
 ![image](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/92953775-2885-4606-9e2d-5ccb81339b7d)
 
-MULTIPLEXER
+LOGIC DIAGRAM OF MULTIPLEXER
 
-![WhatsApp Image 2024-04-06 at 11 10 33_05ec9f7b](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/303679aa-ba85-4884-8b48-e36d9d3e2de9)
+![image](https://github.com/Rakshitha2004s/VLSI-LAB-EXP-2/assets/161333609/aaa1574d-85c4-44ec-b25e-2801fee32fe3)
+
 
 VERILOG CODE
 
@@ -133,7 +132,7 @@ OUTPUT
 ![image](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/56a2902b-1f5f-42b5-9499-ceb63982df40)
 
 
-DEMULTIPLEXER
+LOGIC DIAGRAM OF DEMULTIPLEXER
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/1c45a7fc-08ac-4f76-87f2-c084e7150557)
 
@@ -167,7 +166,7 @@ OUTPUT
 
 ![image](https://github.com/Binnu-123/VLSI-LAB-EXP-2/assets/161333609/a3cb6a60-e919-480f-9f62-da36571a4c97)
 
-MAGNITUDE COMPARATOR
+LOGIC DIAGRAM OF MAGNITUDE COMPARATOR
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-2/assets/6987778/b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2)
 
